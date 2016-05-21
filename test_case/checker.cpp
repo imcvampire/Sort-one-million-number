@@ -29,7 +29,7 @@ int main()
 	for (int i = 0; i < n; ++i)
 	{
 		if (v1[i] != v2[i])
-			cout << "Wrong in " << i << endl;
+			cout << "Wrong in " << (i + 1) << endl;
 	}
 	
 	return 0;
