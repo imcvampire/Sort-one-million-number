@@ -18,7 +18,7 @@ int main()
 		cin >> v[i];
 	}
 	
-	sort(v[0], v[m - 1]);
+	sort(v, v + m);
 	
 	// Write first 500000 number to file
 	fstream fstemp ("temp", fstream::out);
@@ -36,20 +36,19 @@ int main()
 		cin >> v[i];
 	}
 	
-	sort(v[0], v[m - 1]);
+	sort(v, v + m);
 	
 	fstream fsresult ("output.txt", fstream::out);
 	fstream fstemp ("temp", fstream::in);
 	
 	// 2-way merge
 	int temp[p];
-	
-	int i;
-	for (i = 0; i < p; ++i)
+
+	// First 250000 number in temp file
+	for (int i = 0; i < p; ++i)
 	{
 		fs >> temp[i];
-	}
-		
+	}		
 	
 	return 0;
 }
