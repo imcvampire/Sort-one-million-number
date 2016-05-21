@@ -20,14 +20,12 @@ int main()
 	sort(v.begin(), v.end());
 	
 	// Write first 500000 number to file
-	fstream fstemp ("test.txt", fstream::out);
+	fstream fstemp ("temp.txt", fstream::out);
 	
 	for (int i = 0; i < m; ++i)
 	{
 		fstemp << v[i] << endl;
 	}
-	
-	fstemp.close();
 	
 	// Read 500000 others number
 	for (int i = 0; i < m; ++i)
@@ -35,8 +33,11 @@ int main()
 		cin >> v[i];
 	}
 	
-	sort(v.begin(), v.end());	
-	 
+	sort(v.begin(), v.end());
+	
+	fstream fsresult ("output.txt", fstream::out);
+	
+	
 	
 	
 	return 0;
