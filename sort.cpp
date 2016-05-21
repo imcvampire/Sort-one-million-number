@@ -50,5 +50,46 @@ int main()
 		fs >> temp[i];
 	}		
 	
+	int i = 0, // index in temp
+		j = 0; // index in v
+	bool flag = true;
+		
+	while (i < p && j < m)
+	{
+		if (temp[i] > v[j])
+		{
+			cout << v[j] << endl;
+			++j;
+		}
+		else 
+		{
+			cout << temp[i] << endl;
+			++i;
+		}
+		
+		// Check j are in range
+		if (j == m)
+		{
+			// Print others number in temp array
+			for (int k = j; k < p; ++k)
+			{
+				cout << temp[i] << endl;
+			}
+			
+			//Print others number in temp file
+			for (int k = 0; k < p; ++k)
+			{
+				fs >> temp[k]; 
+			}
+			
+			for (int k = 0; k < p; ++k)
+			{
+				cout << temp[k] << endl;
+			}
+			
+			flag = false;
+		}
+	}
+	
 	return 0;
 }
