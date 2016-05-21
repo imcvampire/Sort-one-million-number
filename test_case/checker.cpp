@@ -8,7 +8,7 @@ using namespace std;
 
 int main()
 {
-	fstream fs1 ("input", "r");
+	fstream fs1 ("input", fstream::in);
 	vector<int> v1(n);
 	
 	for (int i = 0; i < n; ++i)
@@ -18,7 +18,7 @@ int main()
 	
 	sort(v1.begin(), v1.end());
 	
-	fstream fs2 ("output", "r");
+	fstream fs2 ("output", fstream::in);
 	vector<int> v2(n);
 	
 	for (int i = 0; i < n; ++i)
