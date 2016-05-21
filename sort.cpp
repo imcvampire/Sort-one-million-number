@@ -6,7 +6,7 @@ using namespace std;
 
 #define n 1000000 // Consumes 4MB
 #define m 500000  // Consumes 2MB
-#define o 250000
+#define p 250000
 
 int main()
 {
@@ -42,13 +42,13 @@ int main()
 	fstream fstemp ("temp", fstream::in);
 	
 	// 2-way merge
-	int temp[o];
+	int temp[p];
 	
-	for (int i = 0; i < o; ++i)
+	int i;
+	for (i = 0; i < p; ++i)
 	{
 		fs >> temp[i];
 	}
-	
 		
 	
 	return 0;
