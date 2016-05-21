@@ -1,13 +1,15 @@
 #include <iostream>
 #include <fstream>
 #include <algorithm>
+#include <vector>
+using namespace std;
 
 #define n 1000000
 
 int main()
 {
 	fstream fs1 ("input", "r");
-	vector v1(n);
+	vector<int> v1(n);
 	
 	for (int i = 0; i < n; ++i)
 	{
@@ -17,7 +19,7 @@ int main()
 	sort(v1.begin(), v1.end());
 	
 	fstream fs2 ("output", "r");
-	vector v2(n);
+	vector<int> v2(n);
 	
 	for (int i = 0; i < n; ++i)
 	{
