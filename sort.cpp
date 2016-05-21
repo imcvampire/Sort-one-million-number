@@ -10,7 +10,7 @@ using namespace std;
 
 int main()
 {
-	frestream
+	// freopen("input", "r", stdin);
 	
 	int v[m];
 	
