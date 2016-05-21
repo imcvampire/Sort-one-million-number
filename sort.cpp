@@ -10,6 +10,8 @@ using namespace std;
 
 int main()
 {
+	frestream
+	
 	int v[m];
 	
 	// Read first 500000 number
@@ -132,6 +134,8 @@ int main()
 			}
 		}
 	}
+	
+	fs.close();
 	
 	return 0;
 }
