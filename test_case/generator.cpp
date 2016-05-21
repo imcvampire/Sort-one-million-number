@@ -14,7 +14,7 @@ int main()
 	
 	for (int i = 0; i < n; ++i)
 	{
-		fs << rand() << endl;
+		fs << (int) rand() << endl;
 	}
 	
 	fs.close();
