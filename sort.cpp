@@ -6,7 +6,7 @@ using namespace std;
 
 #define n 1000000 // Consumes 4MB
 #define m 500000  // Consumes 2MB
-#define p 250000
+#define p 100000
 
 int main()
 {
@@ -46,6 +46,7 @@ int main()
 
 	int temp[p];
 
+<<<<<<< HEAD
 	// First 250000 number in temp file
 	for (int i = 0; i < p; ++i)
 	{
