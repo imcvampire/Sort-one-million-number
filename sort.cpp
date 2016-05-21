@@ -91,5 +91,47 @@ int main()
 		}
 	}
 	
+	// Next 250000 number in temp file
+	if (flag)
+	{
+		for (int k = 0; k < p; ++k)
+		{
+			fs >> temp[k]; 
+		}
+		
+		i = 0;
+		
+		while (i < p && j < m)
+		{
+			if (temp[i] > v[j])
+			{
+				cout << v[j] << endl;
+				++j;
+			}
+			else 
+			{
+				cout << temp[i] << endl;
+				++i;
+			}
+			
+			// Check i and j in range
+			if (i == p)
+			{
+				for (int k = j; k < m; ++k)
+				{
+					cout << v[k] << endl;
+				}
+			}
+			
+			if (j == m)
+			{
+				for (int k = i; k < p; ++k)
+				{
+					cout << temp[k] << endl;
+				}
+			}
+		}
+	}
+	
 	return 0;
 }
