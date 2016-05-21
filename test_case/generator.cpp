@@ -1,6 +1,7 @@
 #include <fstream>
 #include <cstdlib>
 #include <ctime>
+using namespace std;
 
 #define n 1000000
 
