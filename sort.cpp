@@ -38,10 +38,10 @@ int main()
 	
 	sort(v, v + m);
 	
-	fstream fsresult ("output.txt", fstream::out);
-	fstream fstemp ("temp", fstream::in);
-	
+		
 	// 2-way merge
+	fstream fs ("temp", fstream::in);
+
 	int temp[p];
 
 	// First 250000 number in temp file
