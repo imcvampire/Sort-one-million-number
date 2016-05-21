@@ -45,8 +45,6 @@ int main()
 	fstream fs ("temp", fstream::in);
 
 	int temp[p];
-
-<<<<<<< HEAD
 	// First 250000 number in temp file
 	for (int i = 0; i < p; ++i)
 	{
