@@ -4,12 +4,13 @@
 #include <fstream>
 using namespace std;
 
-#define n 1000000
-#define m 500000 
+#define n 1000000 // Consumes 4MB
+#define m 500000  // Consumes 2MB
+#define o 250000
 
 int main()
 {
-	vector<int> v(m);
+	int v[m];
 	
 	// Read first 500000 number
 	for	 (int i = 0; i < m; ++i)
@@ -17,7 +18,7 @@ int main()
 		cin >> v[i];
 	}
 	
-	sort(v.begin(), v.end());
+	sort(v[0], v[m - 1]);
 	
 	// Write first 500000 number to file
 	fstream fstemp ("temp", fstream::out);
@@ -35,14 +36,20 @@ int main()
 		cin >> v[i];
 	}
 	
-	sort(v.begin(), v.end());
+	sort(v[0], v[m - 1]);
 	
 	fstream fsresult ("output.txt", fstream::out);
 	fstream fstemp ("temp", fstream::in);
 	
 	// 2-way merge
+	int temp[o];
 	
+	for (int i = 0; i < o; ++i)
+	{
+		fs >> temp[i];
+	}
 	
+		
 	
 	return 0;
 }
