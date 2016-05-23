@@ -6,11 +6,12 @@ using namespace std;
 
 #define n 1000000 // Consumes 4MB
 #define m 500000  // Consumes 2MB
-#define p 100000
+#define p 250000
 
 int main()
 {
 	// freopen("input", "r", stdin);
+	// fstream output ("output", fstream::out);
 	
 	int v[m];
 	
@@ -45,6 +46,7 @@ int main()
 	fstream fs ("temp", fstream::in);
 
 	int temp[p];
+
 	// First 250000 number in temp file
 	for (int i = 0; i < p; ++i)
 	{
@@ -59,11 +61,13 @@ int main()
 	{
 		if (temp[i] > v[j])
 		{
+			// output << v[j] << endl;
 			cout << v[j] << endl;
 			++j;
 		}
 		else 
 		{
+			// output << temp[i] << endl;
 			cout << temp[i] << endl;
 			++i;
 		}
@@ -74,6 +78,7 @@ int main()
 			// Print others number in temp array
 			for (int k = j; k < p; ++k)
 			{
+				// output << temp[i] << endl;
 				cout << temp[i] << endl;
 			}
 			
@@ -85,6 +90,7 @@ int main()
 			
 			for (int k = 0; k < p; ++k)
 			{
+				// output << temp[k] << endl;
 				cout << temp[k] << endl;
 			}
 			
@@ -106,11 +112,13 @@ int main()
 		{
 			if (temp[i] > v[j])
 			{
+				// output << v[j] << endl;
 				cout << v[j] << endl;
 				++j;
 			}
 			else 
 			{
+				// output << temp[i] << endl;
 				cout << temp[i] << endl;
 				++i;
 			}
@@ -120,6 +128,7 @@ int main()
 			{
 				for (int k = j; k < m; ++k)
 				{
+					// output << v[k] << endl;
 					cout << v[k] << endl;
 				}
 			}
@@ -128,6 +137,7 @@ int main()
 			{
 				for (int k = i; k < p; ++k)
 				{
+					// output << temp[k] << endl;
 					cout << temp[k] << endl;
 				}
 			}
@@ -135,6 +145,7 @@ int main()
 	}
 	
 	fs.close();
+	// output.close();
 	
 	return 0;
 }
