@@ -147,6 +147,8 @@ int main()
 	fs.close();
 	// output.close();
 	
+	remove("temp");
+	
 	return 0;
 	
 }
