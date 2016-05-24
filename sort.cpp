@@ -1,6 +1,5 @@
 #include <iostream>
 #include <algorithm>
-#include <vector>
 #include <fstream>
 using namespace std;
 
@@ -135,6 +134,8 @@ int main()
 	}
 	
 	fs.close();
+	
+	remove("temp");
 	
 	return 0;
 	
