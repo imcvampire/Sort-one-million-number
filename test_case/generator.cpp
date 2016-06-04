@@ -1,6 +1,7 @@
 #include <fstream>
 #include <cstdlib>
 #include <ctime>
+#include <climits>
 using namespace std;
 
 #define n 1000000
@@ -14,7 +15,7 @@ int main()
 	
 	for (int i = 0; i < n; ++i)
 	{
-		fs << (int) rand() << endl;
+		fs << (rand() - RAND_MAX) + (rand() - RAND_MAX) << endl;
 	}
 	
 	fs.close();
