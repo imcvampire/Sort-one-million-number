@@ -98,7 +98,7 @@ int main()
 	
 	for (i = 0; i < p; ++i)
 	{
-		fprintf(f, "%d\n", a[i]);
+		fprintf(f1, "%d\n", a[i]);
 	}
 	
 	fclose(f1);
@@ -115,7 +115,7 @@ int main()
 	
 	for (i = 0; i < p; ++i)
 	{
-		fprintf(f, "%d\n", a[i]);
+		fprintf(f2, "%d\n", a[i]);
 	}
 	
 	fclose(f2);
@@ -130,6 +130,10 @@ int main()
 	}
 	
 	heapsort(a, o);
+	
+	// 3-way merge
+	
+	
 	
 	return 0;
 }
