@@ -25,7 +25,7 @@ int main()
 	
 	for (int i = 0; i < m; ++i)
 	{
-		fstemp << v[i] << endl;
+		fstemp << v[i] << "\n";
 	}
 	
 	fstemp.close();
