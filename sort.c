@@ -2,7 +2,7 @@
 
 #define m 500000  // Consumes 2MB
 #define p 333333  // Consumes 4/3 MB
-#define o 750000
+#define o 333334
 
 void swap(int *a, int *b)
 {
@@ -81,7 +81,7 @@ void heapsort(int *a, int count)
 
 int main()
 {
-	int *a;
+	int *a = NULL;
 	a = (int *) malloc(p * sizeof(int));
 	
 	// Take first 333333 number
@@ -120,7 +120,16 @@ int main()
 	
 	fclose(f2);
 	
+	// Sort last 333334 number
+	free(a);
+	a = (int *) malloc(o * sizeof(int));
 	
+	for (i = 0; i < o; ++i)
+	{
+		scanf("%d", &a[i]);	
+	}
+	
+	heapsort(a, o);
 	
 	return 0;
 }
