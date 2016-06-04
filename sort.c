@@ -81,7 +81,8 @@ void heapsort(int *a, int count)
 
 int main()
 {
-	int a[p];
+	int *a;
+	a = (int *) malloc(p * sizeof(int));
 	
 	// Take first 333333 number
 	int i;
@@ -100,7 +101,26 @@ int main()
 		fprintf(f, "%d\n", a[i]);
 	}
 	
-	fclose(f);
+	fclose(f1);
+	
+	// Take next 333333 number
+	for (i = 0; i < p; ++i)
+	{
+		scanf("%d", &a[i]);	
+	}
+	
+	heapsort(a, p);
+	
+	FILE *f2 = fopen("temp2", "w");
+	
+	for (i = 0; i < p; ++i)
+	{
+		fprintf(f, "%d\n", a[i]);
+	}
+	
+	fclose(f2);
+	
+	
 	
 	return 0;
 }
