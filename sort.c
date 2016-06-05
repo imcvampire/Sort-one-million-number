@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 #define m 500000  // Consumes 2MB
 #define p 333333  // Consumes 4/3 MB
@@ -35,8 +36,6 @@ int midpoint(int imin, int imax)
 {
 	return (imin + imax) / 2;
 }
-
-
 
 int main()
 {
