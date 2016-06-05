@@ -19,5 +19,5 @@ Input and output is contained 1 million lines. Each line contains 1 signed 32-bi
 # How to  build and run:
 To manually build and run this project, you must have all requiremnts installed.
 
-1. Run `gcc -O3 -o sort sort.c` in this project folder.
+1. Run `gcc -o sort sort.c` in this project folder.
 2. Run `./sort` to run this project.
