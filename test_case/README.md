@@ -1,7 +1,7 @@
 # Description:
 This folder contains program to generate test case and check output.
 Test case will be in file with filename "input" and output should be written in file with filename "output".
-Checker will check output, it will print this line output is wrong.
+Checker will check output, it will print line where output is wrong.
 
 # Requirements:
 - GCC 5.2.1 or newest.
