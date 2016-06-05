@@ -89,20 +89,63 @@ int main()
 	
 	quicksort(a, 0, o);
 	
-	// 3-way merge
+	// 2-way merge 2 temp file
 	f1 = fopen("temp1", "r");
 	f2 = fopen("temp2", "r");
 	
+	FILE *f = fopen("temp", "w");
+	
 	int i1 = 0,	// index in f1
-		i2 = 0,	// index in f2
-		i3 = 0;	// index in a
+		i2 = 0;	// index in f2
+	int check = 0;
 	
 	int i_f1, i_f2;
 	
 	fscanf(f1, "%d", &i_f1);
 	fscanf(f2, "%d", &i_f2);
 	
+	while (i1 < p && i2 < p)
+	{
+		if (i_f1 > i_f2)
+		{
+			fprintf(f, "%d\n", i_f2);
+			fscanf(f2, "%d", &i_f2);
+			++i2;
+		}
+		else
+		{
+			fprintf(f, "%d\n", i_f1);
+			fscanf(f1, "%d", &i_f1);
+			++i1;
+		}
+		
+		if (i1 == p)
+		{
+			check = 1;
+		}
+		if (i2 == p)
+		{
+			check = 2;
+		}
+	}
 	
+	if (check == 1)
+	{
+		for (; i2 < p; ++i2)
+		{
+			fprintf(f, "%d", &i_f2);
+			fscanf(f2, "%d", &i_f2);
+		}
+	}
+	
+	if (check == 2)
+	{
+		for (; i1 < p; ++i1)
+		{
+			fprintf(f, "%d", &i_f1);
+			fscanf(f1, "%d", &i_f1);
+		}
+	}
 	
 	return 0;
 }
