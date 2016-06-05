@@ -50,7 +50,7 @@ int main()
 		scanf("%d", &a[i]);	
 	}
 	
-	quicksort(a, 0, p);
+	quicksort(a, 0, p - 1);
 	
 	FILE *f1 = fopen("temp1", "w");
 	
@@ -67,7 +67,7 @@ int main()
 		scanf("%d", &a[i]);	
 	}
 	
-	quicksort(a, 0, p);
+	quicksort(a, 0, p - 1);
 	
 	FILE *f2 = fopen("temp2", "w");
 	
@@ -87,7 +87,7 @@ int main()
 		scanf("%d", &a[i]);	
 	}
 	
-	quicksort(a, 0, o);
+	quicksort(a, 0, o - 1);
 	
 	// 2-way merge 2 temp file
 	f1 = fopen("temp1", "r");
@@ -133,7 +133,7 @@ int main()
 	{
 		for (; i2 < p; ++i2)
 		{
-			fprintf(f, "%d", i_f2);
+			fprintf(f, "%d\n", i_f2);
 			fscanf(f2, "%d", &i_f2);
 		}
 	}
@@ -142,7 +142,7 @@ int main()
 	{
 		for (; i1 < p; ++i1)
 		{
-			fprintf(f, "%d", i_f1);
+			fprintf(f, "%d\n", i_f1);
 			fscanf(f1, "%d", &i_f1);
 		}
 	}
