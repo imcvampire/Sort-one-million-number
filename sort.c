@@ -11,72 +11,31 @@ void swap(int *a, int *b)
 	*a = n;
 }
 
-int leftchildnode(int n)
+void quicksort(int a[], int left, int right)
 {
-	return 2 * n + 1;
-}
-
-int rightchildnode(int n)
-{
-	return 2 * n + 2;
-}
-
-int parentnode(int n)
-{
-	return (n - 1) / 2;
-}
-
-void siftDown(int *a, int start, int count)
-{
-	int i = start;
-	
-	int imax = parentnode(count + 1);
-	while (i < imax)
+	int i = left, j = right;
+	int pivot = a[(left + right) / 2];
+	do
 	{
-		int currentnodeindex = i;
-		int leftnodeindex = leftchildnode(i);
-		int rightnodeindex = rightchildnode(i);
-		
-		if (leftnodeindex < count && a[leftnodeindex] < a[i])
-		{
-			i = leftnodeindex;
-		}
-		
-		if (rightnodeindex < count && a[rightnodeindex] < a[i])
-		{
-			i = rightnodeindex;
-		}
-		
-		if (i != currentnodeindex)
-		{
-			swap(&a[currentnodeindex], &a[i]);
-		}
-		else
-			break;
-	}
+		while (a[i] < pivot && i < right) i++;
+		while (a[j] > pivot && j > left) j--;
+		if (i <= j)
+    	{
+      		swap(&a[i], &a[j]);
+      		i++; 
+      		j--;
+    	}
+  	} while (i <= j);
+   
+  	if (left < j) quicksort(a, left, j);
+  	if (i < right) quicksort(a, i, right);
 }
 
-void heapify(int *a, int count)
+int midpoint(int imin, int imax) 
 {
-	int i;
-	
-	for (i = parentnode(count - 1); i > -1; --i)
-	{
-		siftDown(a, i, count);
-	}
+	return (imin + imax) / 2;
 }
 
-void heapsort(int *a, int count)
-{
-	int end = count - 1;
-	
-	while (end > 0)
-	{
-		swap( &a[0], &a[end]);
-		siftDown(a, 0, end);
-		--end;
-	}
-}
 
 
 int main()
@@ -92,7 +51,7 @@ int main()
 		scanf("%d", &a[i]);	
 	}
 	
-	heapsort(a, p);
+	quicksort(a, p);
 	
 	FILE *f1 = fopen("temp1", "w");
 	
@@ -109,7 +68,7 @@ int main()
 		scanf("%d", &a[i]);	
 	}
 	
-	heapsort(a, p);
+	quicksort(a, p);
 	
 	FILE *f2 = fopen("temp2", "w");
 	
@@ -129,9 +88,20 @@ int main()
 		scanf("%d", &a[i]);	
 	}
 	
-	heapsort(a, o);
+	quicksort(a, o);
 	
 	// 3-way merge
+	f1 = fopen("temp1", "r");
+	f2 = fopen("temp2", "r");
+	
+	int a = 0,	// index in f1
+		b = 0,	// index in f2
+		c = 0;	// index in a
+	
+	int i_f1, i_f2;
+	
+	fscanf(f1, "%d", &i_f1);
+	fscanf(f2, "%d", &i_f2);
 	
 	
 	
