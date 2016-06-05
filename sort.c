@@ -51,7 +51,7 @@ int main()
 		scanf("%d", &a[i]);	
 	}
 	
-	quicksort(a, p);
+	quicksort(a, 0, p);
 	
 	FILE *f1 = fopen("temp1", "w");
 	
@@ -68,7 +68,7 @@ int main()
 		scanf("%d", &a[i]);	
 	}
 	
-	quicksort(a, p);
+	quicksort(a, 0, p);
 	
 	FILE *f2 = fopen("temp2", "w");
 	
@@ -88,15 +88,15 @@ int main()
 		scanf("%d", &a[i]);	
 	}
 	
-	quicksort(a, o);
+	quicksort(a, 0, o);
 	
 	// 3-way merge
 	f1 = fopen("temp1", "r");
 	f2 = fopen("temp2", "r");
 	
-	int a = 0,	// index in f1
-		b = 0,	// index in f2
-		c = 0;	// index in a
+	int i1 = 0,	// index in f1
+		i2 = 0,	// index in f2
+		i3 = 0;	// index in a
 	
 	int i_f1, i_f2;
 	
