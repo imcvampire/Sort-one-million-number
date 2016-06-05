@@ -133,7 +133,7 @@ int main()
 	{
 		for (; i2 < p; ++i2)
 		{
-			fprintf(f, "%d", &i_f2);
+			fprintf(f, "%d", i_f2);
 			fscanf(f2, "%d", &i_f2);
 		}
 	}
@@ -142,10 +142,71 @@ int main()
 	{
 		for (; i1 < p; ++i1)
 		{
-			fprintf(f, "%d", &i_f1);
+			fprintf(f, "%d", i_f1);
 			fscanf(f1, "%d", &i_f1);
 		}
 	}
+	
+	fclose(f1);
+	fclose(f2);
+	fclose(f);
+	
+	remove("temp1");
+	remove("temp2");
+	
+	// Final merge 
+	f = fopen("temp", "r");
+	
+	int i3 = 0,	// index in f
+		i4 = 0;	// index in a
+		
+	int i_f;
+	fscanf(f, "%d", &i_f)
+	
+	while (i3 < (p + p) && i4 < o)
+	{
+		if (i_f > a[i4])
+		{
+			printf("%d\n", a[i4]);
+			++i4;
+		}
+		else 
+		{
+			printf("%d\n", i_f);
+			fscanf(f, "%d", &i_f);
+			++i3;
+		}
+		
+		if (i3 == (p + p))
+		{
+			check = 3;
+		}
+		if (i4 == o)
+		{
+			check = 4;	
+		}
+	}
+	
+	if (check == 3)
+	{
+		for (; i4 < o; ++i4)
+		{
+			printf("%d\n", a[i4]);
+		}
+	}
+	
+	if (check == 4)
+	{
+		for (; i3 < (p + p); ++i3)
+		{
+			printf("%d\n", i_f);
+			fscanf(f, "%d", &i_f);
+		}
+	}
+	
+	fclose(f);
+	remove("temp");
+	free(a);
 	
 	return 0;
 }
