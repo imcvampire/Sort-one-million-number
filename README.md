@@ -11,7 +11,7 @@ This program is compiled by gcc 5.2.1 and is tested in Ubuntu 15.06. It could be
 This is binary compiled file in project (named `sort`). 
 
 # Input/Output format:
-Input and output is contained 1 million. Each line contains 1 signed 32-bit intergers number.
+Input and output is contained 1 million lines. Each line contains 1 signed 32-bit intergers number.
 
 # Requirements:
 - GCC 5.2.1 or newest.
