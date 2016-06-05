@@ -161,7 +161,7 @@ int main()
 		i4 = 0;	// index in a
 		
 	int i_f;
-	fscanf(f, "%d", &i_f)
+	fscanf(f, "%d", &i_f);
 	
 	while (i3 < (p + p) && i4 < o)
 	{
