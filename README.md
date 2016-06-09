@@ -10,7 +10,7 @@ This program's job is sort 1 million of signed 32-bit intergers using 3MB of mem
 This program is compiled by gcc 5.2.1 and is tested in Ubuntu 15.06. It could be compiled by other compiler and run in other OS.
 
 # Input/Output format:
-Input and output is contained 1 million lines. Each line contains 1 signed 32-bit intergers number.
+Input and output contain 1 million lines. Each line contains 1 signed 32-bit intergers number.
 
 # Requirements:
 - GCC 5.2.1 or newer.
