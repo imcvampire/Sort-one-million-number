@@ -15,13 +15,13 @@ Input and output contain 1 million lines. Each line contains 1 signed 32-bit int
 # Requirements:
 - GCC 5.2.1 or newer.
 
-# How to  build and run:
+# How to build and run:
 To manually build and run this project, you must have all requirments installed.
 
 1. Run `gcc -o sort sort.c` in this project folder.
 2. Run `./sort` to run this project.
 
-# Why I choose quicksort:
+# Why do I choose quicksort:
 Even in the worst case, time complexity of Quicksort is O(n^2) but this case is rarely. In real world, Quicksort usually runs faster than other efficient sorting algorithm (Heapsort and Merge sort). A good reason for this is because it is relatively cache-efficient.
 
 In worst case, space complexity of Quicksort is O(logn). But when I test this program with some input, it only consumes about 2700 kbytes, very far from limit of 3072 kbytes so it isn't a big problem.
